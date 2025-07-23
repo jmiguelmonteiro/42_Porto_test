@@ -18,7 +18,7 @@
 
 void ft_filter(char *haystack, char *seed)
 {
-	char *p = NULL;
+	char *p;
 
 	while ((p = memmem(haystack, strlen(haystack), seed, strlen(seed))))
 	{
