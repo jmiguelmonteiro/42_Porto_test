@@ -57,6 +57,7 @@ int	ft_n_queens_puzzle(int n)
 	while (i < n)
 		tab[i++] = -1;
 	solve(tab, 0, &count, n);
+	free(tab);
 	return (count);
 }
 
