@@ -25,16 +25,18 @@ int	main(int ac, char **av)
 {
 	int	target = atoi(av[1]);
 	int	n = ac - 2;
-	int	*arr = malloc(sizeof(int) * n);
-	int	*subset = malloc(sizeof(int) * n);
 
 	if (ac < 3)
 		return (1);
+	int	*arr = malloc(sizeof(int) * n);
 	if (!arr)
 		return (1);
+	int	*subset = malloc(sizeof(int) * n);
 	if (!subset)
 		return (1);
 	for (int i = 0; i < n; i++)
 		arr[i] = atoi(av[i + 2]);
 	find_subset(arr, n, target, subset, 0, 0);
+	free(arr);
+	free(subset);
 }
